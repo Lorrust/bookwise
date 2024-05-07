@@ -3,6 +3,7 @@
 ## Contributors
 - [Lucas Silva](https://github.com/Lorrust)
 - [Jean Guichard](https://github.com/Guichardx2)
+- [Gabriel Morona](https://github.com/M0rona)
 - [Larissa de Mattia](https://github.com/LarissaDeMattia)
 - [Igor Steiner](https://github.com/IgorSteinerS)
 
