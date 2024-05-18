@@ -1,7 +1,7 @@
 # Bookwise
 
 ## Contributors
-|[<img src="https://avatars.githubusercontent.com/u/130867213?v=4" width=115><br><sub> Jean Charles Guichard Guichard </sub>](https://github.com/Guichardx2) |  [<img src="https://avatars.githubusercontent.com/u/97752019?v=4" width=115><br><sub>Lucas da Rosa da Silva</sub>](https://github.com/Lorrust) |  [<img src="https://avatars.githubusercontent.com/u/91230559?v=4" width=115><br><sub>Gabriel Morona</sub>](https://github.com/M0rona) |  [<img src="https://avatars.githubusercontent.com/u/97767359?v=4" width=115><br><sub>Larissa Maximiano</sub>](https://github.com/LarissaDeMattia)  |  [<img src="https://avatars.githubusercontent.com/u/52051101?v=4" width=115><br><sub>Igor Steiner</sub>](https://github.com/IgorSteinerS)
+|[<img src="https://avatars.githubusercontent.com/u/130867213?v=4" width=115><br><sub> Jean Charles Guichard Guichard </sub>](https://github.com/Guichardx2) |  [<img src="https://avatars.githubusercontent.com/u/97752019?v=4" width=115><br><sub>Lucas da Rosa da Silva</sub>](https://github.com/Lorrust) |  [<img src="https://avatars.githubusercontent.com/u/91230559?v=4" width=115><br><sub>Gabriel Morona</sub>](https://github.com/M0rona) |  [<img src="https://avatars.githubusercontent.com/u/97767359?v=4" width=115><br><sub>Larissa de Mattia Maximiano</sub>](https://github.com/LarissaDeMattia)  |  [<img src="https://avatars.githubusercontent.com/u/52051101?v=4" width=115><br><sub>Igor Steiner de Souza</sub>](https://github.com/IgorSteinerS)
 | :---: | :---: | :---: | :---: | :---: |
 
 ## Description
