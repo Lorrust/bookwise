@@ -1,7 +1,13 @@
+import { Routers } from "./router/router";
+
+import GlobalStyles from "./styles/global";
+
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <Routers />
+
+      <GlobalStyles />
     </>
   )
 }
