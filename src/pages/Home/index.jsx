@@ -1,5 +1,9 @@
+import { InvolvesPages } from "../../components/layout/InvolvesPages"
+
 export const Home = () => {
   return (
-    <div>Home</div>
+    <InvolvesPages>
+
+    </InvolvesPages>
   )
 }
