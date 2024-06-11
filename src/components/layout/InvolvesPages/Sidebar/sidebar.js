@@ -10,4 +10,5 @@ export const Container = styled.nav`
     padding: 20px;
     border-right: 1px solid #000;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
 `

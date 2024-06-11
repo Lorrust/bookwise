@@ -10,6 +10,8 @@ export const Container = styled.div`
     background-position: center;
     
     main {
+        display: flex;
+        justify-content: center;
         margin: 5px
         height: 100vh;
         width: 100vw;
