@@ -1,7 +1,6 @@
 import { PrimaryButton } from "../../../button/PrimaryButton"
 import { Container } from "./styles"
 export const Card = ({nome, Autor, Editora}) => {
-
     return(
         <Container> 
             <div className="image">

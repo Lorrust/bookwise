@@ -13,7 +13,6 @@ export const Container = styled.div`
         margin: 5px
         height: 100vh;
         width: 100vw;
-        
         }
     }
 `

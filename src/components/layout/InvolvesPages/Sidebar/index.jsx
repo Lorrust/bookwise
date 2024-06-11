@@ -8,6 +8,7 @@ export const Sidebar = () => {
     setOpenSidebar(!open)
   }
   return(
+
     <Container>
       <div className="nav" onClick={handleOpenSidebar}>
         <nav>
@@ -19,6 +20,7 @@ export const Sidebar = () => {
           </ul>
         </nav>
       </div>
+      
     </Container>
   )
 }

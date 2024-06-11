@@ -1,6 +1,5 @@
 import { Container } from "./homebody";
 
-
 export const InvolvesPages = () => {
   return (
     <Container>

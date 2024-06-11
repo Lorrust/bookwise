@@ -3,6 +3,7 @@ import { Container } from "./styles";
 export const Header = () => {
   return (
     <Container>
+
       <header>
         <img src="/Logo.png" alt="logo" />
         <div className="user">
@@ -12,6 +13,7 @@ export const Header = () => {
           </p>
         </div>
       </header>
+      
     </Container>
   );
 };
