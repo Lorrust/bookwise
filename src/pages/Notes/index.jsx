@@ -10,10 +10,13 @@ export const Notes = () => {
   };
 
   const handleNoteSubmit = (event) => {
-    event.preventDefault();
-    setNotes([...notes, newNote]);
-    setNewNote("");
-  };
+      event.preventDefault();
+      
+      if (newNote.trim() !== "") {
+        setNotes([...notes, newNote]);
+        setNewNote("");
+      }
+    };
 
   return (
     <InvolvesPages>
@@ -24,7 +27,7 @@ export const Notes = () => {
             type="text"
             value={newNote}
             onChange={handleNoteChange}
-            placeholder="Enter a new note:"
+            placeholder="Enter a new note"
           />
           <button type="submit">Add Note</button>
         </form>
