@@ -3,23 +3,23 @@ import { InvolvesPages } from "../../components/layout/InvolvesPages";
 export const AddBook = () => {
   return (
     <InvolvesPages>
-        <h2>Adicione um Livro</h2>
+        <h2>Add a New Book:</h2>
         <div>
-          <label>Título:</label>
+          <label>Title:</label>
           <br />
-          <input type="text" placeholder="Título" /> <br />
-          <label>Autor:</label>
+          <input type="text" placeholder="Title" /> <br />
+          <label>Author:</label>
           <br />
-          <input type="text" placeholder="Autor" />
+          <input type="text" placeholder="Author" />
           <br />
-          <label>Editora:</label>
+          <label>Publisher:</label>
           <br />
-          <input type="text" placeholder="Editora" />
+          <input type="text" placeholder="Publisher" />
           <br/>
-          <label>Selecione uma imagem:</label>
+          <label>Select an Image:</label>
           <br/>
           <input type="file"/> <br/>
-          <button type="submit">Adicionar</button>
+          <button type="submit">Add</button>
         </div>
     </InvolvesPages>
   );
