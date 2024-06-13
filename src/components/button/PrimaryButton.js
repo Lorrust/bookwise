@@ -14,6 +14,7 @@ export const PrimaryButton = styled.button`
     transition: background-color .2s ease-in-out;
 
     &:hover {
+        cursor: pointer;
         background-color: #3CAAB3;
     }
 `;
