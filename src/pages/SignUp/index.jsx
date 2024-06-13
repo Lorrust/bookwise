@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useAuthValue } from "../../contexts/AuthContext";
+
 import { InvolvesLogin } from "../../components/layout/InvolvesLogin";
 
 import { PrimaryInput } from "../../components/form/PrimaryInput";
@@ -16,6 +18,7 @@ export const SignUp = () => {
   });
 
   const navigate = useNavigate();
+  const { setLogged } = useAuthValue();
 
   const handleChange = (e) => {
     const value = e.target.value;

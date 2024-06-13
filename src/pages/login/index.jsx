@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useAuthValue } from "../../contexts/AuthContext";
+
 import { InvolvesLogin } from "../../components/layout/InvolvesLogin";
 
 import { PrimaryInput } from "../../components/form/PrimaryInput";
-import { CheckBoxLine } from "../../components/form/CheckBoxLine";
 import { PrimaryButton } from "../../components/button/PrimaryButton";
 
 export const Login = () => {
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     email: "",
-    pass: "",
-    remember: false,
+    pass: ""
   });
 
   const navigate = useNavigate();
+  const { setLogged } = useAuthValue()
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -31,7 +32,11 @@ export const Login = () => {
       for (const user of users) {
         if (user.email === formData.email && user.pass === formData.pass) {
           localStorage.setItem("loggedUser", JSON.stringify(user));
+
+          setLogged(true)
+          
           navigate("/home");
+          
           return;
         }
       }
@@ -57,17 +62,6 @@ export const Login = () => {
         placeholder="Senha"
         onChange={handleChange}
         required
-      />
-
-      <CheckBoxLine
-        text="Lembrar-me"
-        id="remember"
-        onChange={(isClicked) =>
-          setFormData({
-            ...formData,
-            remember: isClicked,
-          })
-        }
       />
 
       <PrimaryButton type="submit" $size={1.3}>

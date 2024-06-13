@@ -1,4 +1,4 @@
-import Footer from "./components/footer/Footer.jsx";
+import { AuthProvider } from "./contexts/AuthContext";
 import { Routers } from "./router/router";
 
 import GlobalStyles from "./styles/global";
@@ -6,10 +6,11 @@ import GlobalStyles from "./styles/global";
 function App() {
   return (
     <>
-      <Routers />
+      <AuthProvider >
+        <Routers />
+      </AuthProvider>
 
       <GlobalStyles />
-      <Footer />
     </>
   )
 }
