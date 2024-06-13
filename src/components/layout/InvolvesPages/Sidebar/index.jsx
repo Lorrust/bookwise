@@ -10,7 +10,7 @@ export const Sidebar = () => {
         <nav>
           <ul>
             <li><Link to={'/home'}>Biblioteca</Link></li>
-            <li><Link to={'/add-livro'}>Gerenciar Livros</Link></li>
+            <li><Link to={'/add-book'}>Gerenciar Livros</Link></li>
             <li><Link to={'/'}>Suas Avaliações</Link></li>
             <li><Link to={'/'}>Suporte</Link></li>
             <li><Link to={'/'}>Sair</Link></li>
