@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InvolvesPages } from "../../components/layout/InvolvesPages";
+
 export const Notes = () => {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState("");

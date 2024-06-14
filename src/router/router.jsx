@@ -13,7 +13,7 @@ const publicRouters = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/sing-up",
+    path: "/sign-up",
     element: <SignUp />,
   },
   {
