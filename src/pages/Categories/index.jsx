@@ -1,8 +1,8 @@
 import { InvolvesPages } from "../../components/layout/InvolvesPages";
-export const Library = () => {
+export const Categories = () => {
   return (
     <InvolvesPages title="Meus livros">
-        <h1>Biblioteca</h1>
+        <h1>Categorias</h1>
     </InvolvesPages>
   )
 }

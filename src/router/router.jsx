@@ -4,8 +4,8 @@ import { useAuthValue } from "../contexts/AuthContext";
 import { Login } from "../pages/Login";
 import { SignUp } from "../pages/SignUp";
 import { Home } from "../pages/Home";
-import { Library } from "../pages/Library";
-import { Notes } from "../pages/Notes";
+import { Categories } from "../pages/Categories";
+import { Profile } from "../pages/Profile";
 
 const publicRouters = createBrowserRouter([
   {
@@ -28,12 +28,12 @@ const privateRouters = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/library",
-    element: <Library />,
+    path: "/categorias",
+    element: <Categories />,
   },
   {
-    path: "/notes",
-    element: <Notes />,
+    path: "/perfil",
+    element: <Profile />
   },
   {
     path: "*",
