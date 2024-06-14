@@ -4,7 +4,7 @@ import { useAuthValue } from "../contexts/AuthContext";
 import { Login } from "../pages/Login";
 import { SignUp } from "../pages/SignUp";
 import { Home } from "../pages/Home";
-import { AddBook } from "../pages/AddBook";
+import { Library } from "../pages/Library";
 import { Notes } from "../pages/Notes";
 
 const publicRouters = createBrowserRouter([
@@ -28,8 +28,8 @@ const privateRouters = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/add-book",
-    element: <AddBook />,
+    path: "/library",
+    element: <Library />,
   },
   {
     path: "/notes",

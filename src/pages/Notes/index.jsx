@@ -19,24 +19,22 @@ export const Notes = () => {
     };
 
   return (
-    <InvolvesPages>
-      <main style={{ display: "grid"}}>
-        <h1>Notes</h1>
-        <form onSubmit={handleNoteSubmit}>
-          <input
-            type="text"
-            value={newNote}
-            onChange={handleNoteChange}
-            placeholder="Enter a new note"
-          />
-          <button type="submit">Add Note</button>
-        </form>
-        <ul>
-          {notes.map((note, index) => (
-            <li key={index}>{note}</li>
-          ))}
-        </ul>
-      </main>
+    <InvolvesPages title="Notas pessoais">
+      <h1>Notes</h1>
+      <form onSubmit={handleNoteSubmit}>
+        <input
+          type="text"
+          value={newNote}
+          onChange={handleNoteChange}
+          placeholder="Enter a new note"
+        />
+        <button type="submit">Add Note</button>
+      </form>
+      <ul>
+        {notes.map((note, index) => (
+          <li key={index}>{note}</li>
+        ))}
+      </ul>
     </InvolvesPages>
   );
 };

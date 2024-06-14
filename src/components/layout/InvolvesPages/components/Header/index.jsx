@@ -8,8 +8,6 @@ export const Header = ({ title }) => {
 
       <div>
         <h2>{loggedUser.username}</h2>
-
-        <p>Menu da conta</p>
       </div>
     </Container>
   );

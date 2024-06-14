@@ -16,12 +16,12 @@ export const SideBar = () => {
 
   return (
     <Styled.Container>
-        <img src="public/Logo.png" alt="Logo" />
+        <img src="public/Logo.png" alt="Logo" onClick={() => navigate("/home")} />
 
         <nav>
             <Styled.ItemNav to="/home">Início</Styled.ItemNav>
-            <Styled.ItemNav to="/add-coletion">Coleção</Styled.ItemNav>
-            <Styled.ItemNav to="/painel-controle">Painel de controle</Styled.ItemNav>
+            <Styled.ItemNav to="/library">Minha biblioteca</Styled.ItemNav>
+            <Styled.ItemNav to="/notes">Notas</Styled.ItemNav>
             <Styled.ItemExit onClick={logoutUser}>Sair</Styled.ItemExit>
         </nav>
     </Styled.Container>
