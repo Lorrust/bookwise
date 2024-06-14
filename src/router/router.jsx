@@ -6,6 +6,7 @@ import { SignUp } from "../pages/SignUp";
 import { Home } from "../pages/Home";
 import { Categories } from "../pages/Categories";
 import { Profile } from "../pages/Profile";
+import { Teste } from "../pages/Teste";
 
 const publicRouters = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const privateRouters = createBrowserRouter([
   {
     path: "/perfil",
     element: <Profile />
+  },
+  {
+    path: "/teste",
+    element: <Teste />
   },
   {
     path: "*",
