@@ -9,6 +9,6 @@ export const Container = styled.div`
     }
     
     main {
-        padding: 20px 40px;
+        padding: 20px 0 20px 40px;
     }
 `;

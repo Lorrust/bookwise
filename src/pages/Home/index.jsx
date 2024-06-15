@@ -1,11 +1,25 @@
 import { InvolvesPages } from "../../components/layout/InvolvesPages"
 import { GeneralSearch } from "./components/GeneralSearch";
+import { Collection } from "./components/Collection";
+import { NotesCollection } from "./components/NotesCollection";
+import * as Styled from "./styles";
 export const Home = () => {
   const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
   
   return ( 
     <InvolvesPages title={`Bem vindo ${loggedUser.name}`}>
-      <GeneralSearch /> 
+      <GeneralSearch />
+      
+      <Styled.Container>
+
+        <Styled.CardContainer>
+          <Collection title="Recomendações"/>
+          <Collection title="Favoritos"/>
+        </Styled.CardContainer>
+
+        <NotesCollection />
+      </Styled.Container>
+
     </InvolvesPages>
   );
 }

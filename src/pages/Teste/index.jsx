@@ -1,6 +1,7 @@
+import { Collection } from "../Home/components/Collection"
 export const Teste = () => {
 
     return(
-        <h1>Teste</h1>
+        <Collection />
     )
 }
