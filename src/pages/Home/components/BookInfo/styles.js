@@ -2,6 +2,8 @@ import styled from "styled-components";
 import * as Dialog from '@radix-ui/react-dialog';
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center; 
   .bookinfo {
     display: flex;
     flex-direction: column;
@@ -11,6 +13,7 @@ export const Container = styled.div`
     background: white;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: lightblue;
 
     input {
       width: 100%;
@@ -56,6 +59,13 @@ export const Container = styled.div`
     width: 45px;
     height: 45px;
     border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(75, 193, 210, 0.3);
+    }
   }
 `;
 

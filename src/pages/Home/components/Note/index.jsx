@@ -4,7 +4,7 @@ export const Note = () => {
   return (
     <Styled.Container>
       <Styled.Fita />
-      <p contenteditable="true">
+      <p contentEditable="true">
         
       </p>
     </Styled.Container>

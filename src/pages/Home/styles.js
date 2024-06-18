@@ -10,3 +10,8 @@ export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
 `
+
+export const AddbookContainer = styled.div`
+    display: flex;
+    gap: 10px;
+` 

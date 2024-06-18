@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./styles";
 import { Container, StyledDialogContent, StyledDialogOverlay } from "./styles";
 import * as Dialog from '@radix-ui/react-dialog';
