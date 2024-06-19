@@ -11,11 +11,14 @@ export const Container = styled.section`
 `;
 
 export const Notes = styled.div`
-    /* display: flex;
-    flex-direction: column;
-    gap: 40px; */
     padding: 10px;
+    max-height: calc(100vh - 225px);
+    transition: all 0.3s ease-in-out;
     overflow-y: auto;
-    max-height: calc(1000px - 262px);
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 
+    &:hover {
+        scrollbar-color: auto;
+    }
 `

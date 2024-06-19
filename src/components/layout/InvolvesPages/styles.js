@@ -5,10 +5,15 @@ export const Container = styled.div`
     height: 100%;
 
     article {
+        display: flex;
+        flex-direction: column;
         width: 100%
     }
     
     main {
-        padding: 20px 0 20px 40px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 0 40px;
+        flex: 1;
     }
 `;

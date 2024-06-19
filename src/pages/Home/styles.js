@@ -2,16 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    justify-content: space-between;
     gap: 20px;
+
+    flex: 1;
 `;
 
 export const CardContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+    flex: 1;
 
-export const AddbookContainer = styled.div`
-    display: flex;
-    gap: 10px;
-` 
+    scrollbar-color: transparent transparent;
+
+    &:hover {
+        scrollbar-color: auto;
+    }
+`

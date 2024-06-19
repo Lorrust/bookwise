@@ -8,13 +8,23 @@ export const Container = styled.div`
     width: 300px;
     border-radius: 8px;
     margin-top: 30px;
-    p{
-        padding: 10px;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.5);
-    }
 `
-export const Fita= styled.div` 
+
+export const TextContainer = styled.div`
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    max-height: 360px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    &:focus {
+        scrollbar-color: auto;
+    }
+`    
+
+export const Fita = styled.div` 
     background: rgba(150, 2, 138);
     opacity: 0.5;
     position: absolute;
