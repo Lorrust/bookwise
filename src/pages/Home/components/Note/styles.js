@@ -7,7 +7,7 @@ export const Container = styled.div`
     max-height: 400px;
     width: 300px;
     border-radius: 8px;
-    margin-top: 30px;
+    margin: 30px 15px 0 0 ;
 `
 
 export const TextContainer = styled.div`

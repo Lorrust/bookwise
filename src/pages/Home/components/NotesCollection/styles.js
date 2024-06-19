@@ -6,7 +6,7 @@ export const Container = styled.section`
     gap: 20px;
     margin-top: 30px;  
     border-left: 1px solid #ccc;
-    padding: 0 20px;
+    padding-left: 20px;
 
 `;
 
