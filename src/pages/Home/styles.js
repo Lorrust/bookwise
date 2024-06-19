@@ -18,3 +18,9 @@ export const CardContainer = styled.div`
         scrollbar-color: auto;
     }
 `
+
+export const Line = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+`

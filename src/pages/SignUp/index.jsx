@@ -6,7 +6,7 @@ import { useAuthValue } from "../../contexts/AuthContext";
 import { InvolvesLogin } from "../../components/layout/InvolvesLogin";
 
 import { PrimaryInput } from "../../components/form/PrimaryInput";
-import { PrimaryButton } from "../../components/button/PrimaryButton";
+import { PrimaryButton } from "../../components/button";
 
 export const SignUp = () => {
   const [error, setError] = useState(null);
