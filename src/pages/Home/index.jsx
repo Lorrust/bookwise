@@ -1,30 +1,29 @@
-import { InvolvesPages } from "../../components/layout/InvolvesPages"
-import { Card } from "../../components/layout/InvolvesPages/Card/card"
-import {SearchFilter} from "../../components/layout/InvolvesPages/SearchFilter"
+import { InvolvesPages } from "../../components/layout/InvolvesPages";
+import { GeneralSearch } from "./components/GeneralSearch";
+import { Collection } from "./components/Collection";
+import { NotesCollection } from "./components/NotesCollection";
+
+import * as Styled from "./styles";
+import { BookInfo } from "./components/BookInfo";
 export const Home = () => {
-  return ( 
-    <InvolvesPages title={'Bem-vindos a sua biblioteca online!'}
-      catalog_name1={'Favoritos'}
-      catalog_name2={'Adicionados recentemente'}
-      catalog_name3={'Continue lendo'}
-    >
-      {/* <SearchFilter /> */}
-     <Card
-      name={'Livro 1'}
-      author={'Autor 1'}
-      company={'Editora 1'} 
-     />
-     <Card
-      name={'Livro 2'}
-      author={'Autor 2'}
-      company={'Editora 2'} 
-     />
-     <Card
-      name={'Livro 3'}
-      author={'Autor 3'}
-      company={'Editora 3'} 
-     />
-    
+  const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+
+  return (
+    <InvolvesPages title={`Bem vindo ${loggedUser.name}`}>
+      <Styled.Line>
+        <BookInfo title="Cadastre um novo livro" />
+
+        <GeneralSearch />
+      </Styled.Line>
+
+      <Styled.Container>
+        <Styled.CardContainer>
+          <Collection title="Recentemente adicionados" />
+          <Collection title="Favoritos" />
+        </Styled.CardContainer>
+
+        <NotesCollection />
+      </Styled.Container>
     </InvolvesPages>
   );
-}
+};

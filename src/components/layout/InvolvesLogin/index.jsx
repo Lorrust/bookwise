@@ -20,7 +20,7 @@ export const InvolvesLogin = ({ children, text, cb, login }) => {
 
         <span>
           {login ? "Não possui uma conta? " : "Já possui uma conta? "}
-          <Link to={login ? "/cadastro" : "/"}>{login ? "Cadastre-se!" : "Realize o login!"}</Link>{" "}
+          <Link to={login ? "/sign-up" : "/"}>{login ? "Cadastre-se!" : "Realize o login!"}</Link>{" "}
         </span>
       </section>
     </Container>

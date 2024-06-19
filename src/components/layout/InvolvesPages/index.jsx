@@ -1,40 +1,20 @@
-import { Container } from "./homebody";
-import { Header } from "./Header";
-import { Sidebar } from "./Sidebar";
-import { SearchFilter } from "./SearchFilter";
+import { Header } from "./components/Header"
+import { SideBar } from "./components/SideBar"
+import { Container } from "./styles"
 
-export const InvolvesPages = ({
-  children,
-  title,
-  catalog_name1,
-  catalog_name2,
-  catalog_name3,
-}) => {
+export const InvolvesPages = ({children, title}) => {
   return (
-    <Container>
-      <Header />
-      <Sidebar />
-      <main>
-        <SearchFilter />
-        <section className="container">
-          {/* {children} */}
-          {/* <h1>{title}</h1> */}
-          <div className="catalog">
-            <div className="favorite">
-              <h2>{catalog_name1}</h2>
-              <div className="contain">{children}</div>
-            </div>
-            <div className="recently-added">
-              <h2>{catalog_name2}</h2>
-              <div className="contain">{children}</div>
-            </div>
-            <div className="reading">
-              <h2>{catalog_name3}</h2>
-              <div className="contain">{children}</div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </Container>
-  );
-};
+      <Container>
+        <SideBar />
+
+        <article>
+          <Header title={title}/>
+
+          <main>
+            {children}
+          </main>
+        </article>
+        
+      </Container>
+  )
+}

@@ -6,11 +6,12 @@ import { useAuthValue } from "../../contexts/AuthContext";
 import { InvolvesLogin } from "../../components/layout/InvolvesLogin";
 
 import { PrimaryInput } from "../../components/form/PrimaryInput";
-import { PrimaryButton } from "../../components/button/PrimaryButton";
+import { PrimaryButton } from "../../components/button";
 
 export const SignUp = () => {
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
+    username: "",
     name: "",
     email: "",
     pass: "",
@@ -43,7 +44,7 @@ export const SignUp = () => {
 
     if (users) {
       for (let user of users) {
-        if (user.name == formData.name) {
+        if (user.username == formData.username) {
           setError("Nome de usuário já cadastrado!");
           errorOccurred = true;
           break;
@@ -61,6 +62,7 @@ export const SignUp = () => {
 
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedUser", JSON.stringify(formData));
+    setLogged(true)
     navigate("/home");
   };
 
@@ -68,10 +70,19 @@ export const SignUp = () => {
     <InvolvesLogin text="Cadastre-se" cb={registerUser}>
       <PrimaryInput
         type="text"
+        name="username"
+        id="username"
+        value={formData.username}
+        placeholder="Nome de usuário"
+        onChange={handleChange}
+        required
+      />
+      <PrimaryInput
+        type="text"
         name="name"
         id="name"
         value={formData.name}
-        placeholder="Nome de usuário"
+        placeholder="Nome completo"
         onChange={handleChange}
         required
       />
