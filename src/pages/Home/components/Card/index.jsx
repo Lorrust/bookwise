@@ -1,16 +1,18 @@
-import { HeartIcon,HeartFilledIcon } from "@radix-ui/react-icons";
+import { HeartIcon, HeartFilledIcon } from "@radix-ui/react-icons";
+import PropTypes from "prop-types";
 import * as Styled from "./styles";
-export const Card = ({ name, author, img_source }) => {
+
+export const Card = ({ title, author, imageUrl }) => {
   return (
     <Styled.Container>
       <Styled.ButtonContainerDiv>
         <Styled.ButtonContainer>
           <HeartIcon />
-        </Styled.ButtonContainer> 
+        </Styled.ButtonContainer>
       </Styled.ButtonContainerDiv>
-      <img src={img_source} alt="Book Cover" />
+      <img src={imageUrl} alt="Book Cover" />
       <div>
-        <h3>{name}</h3>
+        <h3>{title}</h3>
         <p>{author}</p>
       </div>
     </Styled.Container>

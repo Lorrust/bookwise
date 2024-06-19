@@ -1,13 +1,31 @@
 import { useState } from "react";
 import "./styles";
 import { Container, StyledDialogContent, StyledDialogOverlay } from "./styles";
-import * as Dialog from '@radix-ui/react-dialog';
+import * as Dialog from "@radix-ui/react-dialog";
 
-export const BookInfo = ({ pageName }) => {
+export const BookInfo = ({ addCard }) => {
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
+
+  const handleAuthorChange = (event) => {
+    setAuthor(event.target.value);
+  };
 
   const handleImageUrlChange = (event) => {
     setImageUrl(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addCard(title, author, imageUrl);
+    setTitle("");
+    setAuthor("");
+    setImageUrl("");
   };
 
   return (
@@ -19,29 +37,30 @@ export const BookInfo = ({ pageName }) => {
         <StyledDialogOverlay />
         <StyledDialogContent>
           <div className="bookinfo">
-            <h1>{pageName}</h1>
-            <form>
-              <label>Title:</label>
+            <h1>{addCard}</h1>
+            <form onSubmit={handleSubmit}>
+              <label>Título:</label>
               <br />
-              <input type="text" placeholder="Title" /> <br />
-              <label>Author:</label>
+              <input type="text" value={title} onChange={handleTitleChange} />
               <br />
-              <input type="text" placeholder="Author" />
+              <label>Autor:</label>
               <br />
-              <label>Publisher:</label>
+              <input type="text" value={author} onChange={handleAuthorChange} />
               <br />
-              <input type="text" placeholder="Publisher" />
+              <label>URL da Imagem:</label>
               <br />
-              <label>Type image URL:</label>
-              <br />
-              <input type="url" value={imageUrl} onChange={handleImageUrlChange} />
+              <input
+                type="url"
+                value={imageUrl}
+                onChange={handleImageUrlChange}
+              />
               <br />
               {imageUrl && <img src={imageUrl} alt="Book Cover" />}
               <br />
               <div>
-                <button type="submit">Confirm</button>
+                <button type="submit">Confirmar</button>
                 <Dialog.Close asChild>
-                  <button>Cancel</button>
+                  <button>Cancelar</button>
                 </Dialog.Close>
               </div>
             </form>
