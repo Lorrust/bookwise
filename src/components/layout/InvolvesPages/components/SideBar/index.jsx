@@ -16,7 +16,7 @@ export const SideBar = () => {
 
   return (
     <Styled.Container>
-        <img src="public/Logo.png" alt="Logo" onClick={() => navigate("/home")} />
+        <img src="Logo.png" alt="Logo" onClick={() => navigate("/home")} />
 
         <nav>
             <Styled.ItemNav to="/home">Biblioteca</Styled.ItemNav>

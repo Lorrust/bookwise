@@ -1,6 +1,7 @@
 import { AuthProvider } from "./contexts/AuthContext";
 import { BooksProvider } from "./contexts/BooksContext";
 import { CategoriesProvider } from "./contexts/CategoriesContext";
+import { CloseModalProvider } from "./contexts/CloseModalContext";
 import { NotesProvider } from "./contexts/NotesContext";
 import { Routers } from "./router/router";
 
@@ -13,7 +14,9 @@ function App() {
         <BooksProvider>
           <CategoriesProvider>
             <NotesProvider>
-              <Routers />
+              <CloseModalProvider>
+                <Routers />
+              </CloseModalProvider>
             </NotesProvider>
           </CategoriesProvider>
         </BooksProvider>
