@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const CardContainer = styled.div`
     overflow-y: auto;
-    max-height: calc(100vh - 150px);
+    max-height: calc(100vh - 175px);
     flex: 1;
 
     scrollbar-color: transparent transparent;
@@ -22,5 +22,5 @@ export const CardContainer = styled.div`
 export const Line = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-right: 40px;
+    margin: 0 40px 20px 0;
 `

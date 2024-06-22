@@ -4,7 +4,6 @@ import { useAuthValue } from "../contexts/AuthContext";
 import { Login } from "../pages/Login";
 import { SignUp } from "../pages/SignUp";
 import { Home } from "../pages/Home";
-import { Categories } from "../pages/Categories";
 import { Profile } from "../pages/Profile";
 import { Teste } from "../pages/Teste";
 
@@ -29,16 +28,16 @@ const privateRouters = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/categorias",
-    element: <Categories />,
-  },
-  {
     path: "/perfil",
     element: <Profile />
   },
   {
     path: "/teste",
     element: <Teste />
+  },
+  {
+    path: "/search/:query",
+    element: <Home/>  
   },
   {
     path: "*",

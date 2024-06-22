@@ -12,7 +12,7 @@ export const Container = styled.section`
 
 export const Notes = styled.div`
     padding: 10px;
-    max-height: calc(100vh - 225px);
+    max-height: calc(100vh - 245px);
     transition: all 0.3s ease-in-out;
     overflow-y: auto;
     scrollbar-width: thin;

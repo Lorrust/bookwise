@@ -20,7 +20,6 @@ export const SideBar = () => {
 
         <nav>
             <Styled.ItemNav to="/home">Biblioteca</Styled.ItemNav>
-            <Styled.ItemNav to="/categorias">Categorias</Styled.ItemNav>
             <Styled.ItemNav to="/perfil">Perfil</Styled.ItemNav>
             <Styled.ItemExit onClick={logoutUser}>Sair</Styled.ItemExit>
         </nav>
