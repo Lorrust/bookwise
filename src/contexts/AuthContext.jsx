@@ -2,7 +2,7 @@ import { useContext, createContext, useState } from "react";
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({ children, value }) => {
+export const AuthProvider = ({ children }) => {
   const [logged, setLogged] = useState(
     localStorage.getItem("loggedUser") ? true : false
   );

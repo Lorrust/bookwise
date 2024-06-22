@@ -1,11 +1,13 @@
 import { Root, Trigger, Portal, Close } from '@radix-ui/react-dialog';
 import * as Styled from "./styles";
-import { PrimaryButton, SecondaryButton } from '../button';
 import { Cross1Icon } from '@radix-ui/react-icons';
+import { useCloseModalValue } from '../../contexts/CloseModalContext';
 
-export const Modal = ({button, title, children}) => {
+export const Modal = ({button, title, children}) => {    
+    const { closedModal } = useCloseModalValue();
+    
     return (
-      <Root>
+      <Root open={closedModal} >
         <Trigger asChild>
             {button}
         </Trigger>
@@ -27,19 +29,6 @@ export const Modal = ({button, title, children}) => {
                 <Styled.Container>
                     {children}
                 </Styled.Container>
-
-                <footer>
-                    <Close asChild>
-                        <PrimaryButton>
-                            Salvar
-                        </PrimaryButton>
-                    </Close>
-                    <Close asChild>
-                        <SecondaryButton>
-                            Cancelar
-                        </SecondaryButton>
-                    </Close>
-                </footer>
             </Styled.Content>
         </Portal>
       </Root>

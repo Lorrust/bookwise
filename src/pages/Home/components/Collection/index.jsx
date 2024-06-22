@@ -1,5 +1,5 @@
-import * as Styled from "./styles";
 import { Card } from "../Card";
+<<<<<<< HEAD
 
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,10 +11,21 @@ import "swiper/css/scrollbar";
 
 // eslint-disable-next-line react/prop-types
 export const Collection = ({ title }) => {
+=======
+import { useBookValue } from "../../../../contexts/BooksContext";
+
+import * as Styled from "./styles";
+
+// eslint-disable-next-line react/prop-types
+export const Collection = ({ title, items }) => {
+  const { books } = useBookValue()
+
+>>>>>>> 601b5d67fbcdfc36d981a8f639992e2b74e220ff
   return (
     <Styled.CollectionContainer>
       <h2>{title}</h2>
       <Styled.CardContainer>
+<<<<<<< HEAD
         <Swiper
           modules={[Navigation, Pagination, Scrollbar]}
           spaceBetween={50}
@@ -52,6 +63,18 @@ export const Collection = ({ title }) => {
             />
           </SwiperSlide>
         </Swiper>
+=======
+        {items && items.map((idBook) => {
+          const bookInfo = books.find((item) => item.id === idBook);
+
+          return (
+            <Card
+              key={bookInfo.id}
+              {...bookInfo}
+            />
+          );
+        })}
+>>>>>>> 601b5d67fbcdfc36d981a8f639992e2b74e220ff
       </Styled.CardContainer>
     </Styled.CollectionContainer>
   );

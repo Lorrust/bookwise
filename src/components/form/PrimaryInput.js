@@ -14,4 +14,8 @@ export const PrimaryInput = styled.input`
     &::placeholder {
         color: #5E8396;
     }
+
+    &:focus {
+       border: 1px solid #2584FF;
+    }
 `;
