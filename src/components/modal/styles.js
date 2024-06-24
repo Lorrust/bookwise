@@ -46,6 +46,7 @@ export const HeaderLine = styled.div`
     button {
         background-color: transparent;
         border: none;
+        cursor: pointer;
 
         svg {
             width: 20px;

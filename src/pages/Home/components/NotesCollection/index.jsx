@@ -1,30 +1,39 @@
 import * as Styled from "./styles";
+import { useState } from "react";
 import { Note } from "../Note";
+import { PrimaryButton } from "../../../../components/button";
+import { useNotesValue } from "../../../../contexts/NotesContext";
+import { PlusIcon } from "@radix-ui/react-icons";
+import { Modal } from "../../../../components/modal";
+import { AddNote } from "../AddNote";
+
 export const NotesCollection = () => {
+  const { notes } = useNotesValue();
+
+  const [noteColor, setNoteColor] = useState("")
+
+  function handleNewNote() {
+    setNotes((currentNotes) => ([
+      ...currentNotes,
+      {
+        id: currentNotes.length + 1,
+        color: noteColor,
+        text: "",
+      }
+    ]));
+  }
+
   return (
     <Styled.Container>
-      <h2>Notas</h2>
+      <Styled.LineHeader>
+        <h2>Notas</h2>
+
+        <AddNote />
+      </Styled.LineHeader>
       <Styled.Notes>
-        <Note text={
-          `There are many variations of passages of Lorem Ipsum available, 
-          but the majority have suffered alteration in some form, by injected humour, 
-          or randomised words which don't look even slightly believable. 
-          If you are going to use a passage of Lorem Ipsum, 
-          you need to be sure there isn't anything embarrassing hidden in 
-          the middle of text. All the Lorem Ipsum generators on the Internet tend to 
-          repeat predefined chunks as necessary, making this the first true generator on 
-          the Internet. It uses a dictionary of over 200 Latin words, combined with a handful 
-          of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
-          The generated Lorem Ipsum is therefore always free from repetition, injected humour, 
-          or non-characteristic words etc.`
-        } />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
-        <Note />
+        {notes.map((note) => (
+          <Note key={note.id} text={note.text} color={note.color} />
+        ))}
       </Styled.Notes>
     </Styled.Container>
   );

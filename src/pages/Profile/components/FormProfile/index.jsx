@@ -2,15 +2,14 @@ import { PrimaryInput } from "../../../../components/form/PrimaryInput";
 import { PrimaryButton } from "../../../../components/button";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import {useAuthValue} from "../../../../contexts/AuthContext"
 import * as Styled from "./styles";
 
-export const FormProfile = () => {
+export const FormProfile = ({infosUser}) => {
   const navigate = useNavigate();
-  const [operation, setOperation] = useState();
+  const {setLogged} = useAuthValue();
 
-//   const loggeduser = JSON.parse(localStorage.getItem("loggedUser"));
-
-  const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem("loggedUser")))
+  const { loggedUser, setLoggedUser } = infosUser;
 
   const [username, setUsername] = useState(loggedUser.username);
   const [email, setEmail] = useState(loggedUser.email);
@@ -26,25 +25,51 @@ export const FormProfile = () => {
     setPassword(event.target.value);
   };
 
-  const saveToLocalStorage = () => {
-    const updatedUser = { ...loggedUser, username, email, password};
+  const saveToLocalStorage = (e) => {
+    e.preventDefault();
+
+    const updatedUser = { ...loggedUser, username, email};
+
     localStorage.setItem("loggedUser", JSON.stringify(updatedUser));
 
     setLoggedUser(updatedUser);
+
+    const users = JSON.parse(localStorage.getItem("users"));
+    
+    const userIndex = users.findIndex(user => user.id === loggedUser.id);
+
+    if (userIndex !== -1) {
+      users[userIndex] = updatedUser;
+      const updatedUsersJson = JSON.stringify(users);
+      localStorage.setItem("users", updatedUsersJson);
+    }
+
   };
 
   function removeUser() {
-    setOperation(localStorage.removeItem("loggedUser"));
-    navigate("/");
-  }
+    
+    const users = JSON.parse(localStorage.getItem("users"));
+    
+    const userIndex = users.findIndex(user => user.id === loggedUser.id);
+    
+    if (userIndex !== -1) {
 
-  if (operation === "Excluir") {
-    removeUser();
+      users.splice(userIndex, 1);
+    
+      const updatedUsersJson = JSON.stringify(users);
+    
+      localStorage.setItem("users", updatedUsersJson);
+    }
+  
+
+    localStorage.removeItem("loggedUser");
+    setLogged(false)
+    navigate("/");
   }
 
   return (
     <Styled.Container>
-      <Styled.FormContainer>
+      <Styled.FormContainer onSubmit={saveToLocalStorage}>
         <Styled.Identifier>
           <PrimaryInput
             value={loggedUser.name}
@@ -65,7 +90,6 @@ export const FormProfile = () => {
           />
           <PrimaryInput
             type="password"
-            // value={password}
             onChange={handlePasswordChange}
             placeholder="Senha"
           />
@@ -76,7 +100,7 @@ export const FormProfile = () => {
           />
         </Styled.FormBody>
         <Styled.ButtonContainer>
-          <PrimaryButton onClick={saveToLocalStorage} type="submit">
+          <PrimaryButton type="submit">
             Salvar
           </PrimaryButton>
           <PrimaryButton

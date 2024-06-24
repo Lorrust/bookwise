@@ -10,6 +10,13 @@ export const Container = styled.section`
 
 `;
 
+export const LineHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px
+`
+
 export const Notes = styled.div`
     padding: 10px;
     max-height: calc(100vh - 245px);

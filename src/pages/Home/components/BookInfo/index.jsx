@@ -46,17 +46,17 @@ export const BookInfo = ({ title }) => {
     }
   
     // Cria as categorias novas
-    formData.categories.forEach((categorie) => {
-      if(categorie.__isNew__) {
+    formData.categories.forEach((category) => {
+      if(category.__isNew__) {
         setCategories((currentCategories) => {
 
-          categorie.value = currentCategories.length + 1
+          category.value = currentCategories.length + 1
 
           return ([
             ...currentCategories,
             {
               id: currentCategories.length + 1,
-              name: categorie.label,
+              name: category.label,
               items: []
             }
           ])
@@ -65,9 +65,9 @@ export const BookInfo = ({ title }) => {
     })
 
     // Adiciona o id do novo livro nas categorias selecionadas
-    formData.categories.forEach((categorie) => {
-      setCategories((currentCategorie) => currentCategorie.map((category) => {
-        if(category.id === categorie.value) {
+    formData.categories.forEach((category) => {
+      setCategories((currentCategories) => currentCategor.map((category) => {
+        if(category.id === category.value) {
           return { ...category, items: [...category.items, books.length + 1]}
         }
 
@@ -104,7 +104,7 @@ export const BookInfo = ({ title }) => {
       button={
         <PrimaryButton>
           <PlusIcon />
-          <span>Cadastrar novo livro</span>
+          <span>Livro</span>
         </PrimaryButton>
       }
       title={title}

@@ -6,15 +6,15 @@ export const NotesProvider = ({children}) => {
     const [notes, setNotes] = useState([{
         id: 1,
         color: "rgb(176, 25, 113)",
-        data: '2023-09-01',
+        text: 'Lorem ipsum',
     }, {
         id: 2,
         color: "rgb(189, 181, 38)",
-        data: '2023-10-01',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     }, {
         id: 3,
         color: "rgb(52, 117, 38)",
-        data: new Date(),
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt aliquam.',
     }]);
 
     return (

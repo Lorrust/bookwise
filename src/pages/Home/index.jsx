@@ -14,9 +14,9 @@ export const Home = () => {
   const { categories } = useCategoriesValue()
 
   return (
-    <InvolvesPages title={`Bem vindo ${loggedUser.name}`}>
+    <InvolvesPages title={`Bem vindo, ${loggedUser.name}`}>
       <Styled.Line>
-        <BookInfo title="Cadastre um novo livro" />
+        <BookInfo title="Novo Livro" />
 
         <GeneralSearch />
       </Styled.Line>
@@ -25,8 +25,8 @@ export const Home = () => {
         <Styled.CardContainer>
           { categories.length &&
             (
-              categories.map((categorie) => {
-                return <Collection key={categorie.id} title={categorie.name} items={categorie.items} />
+              categories.map((category) => {
+                return <Collection key={category.id} title={category.name} items={category.items} />
               })
             )
           }

@@ -11,6 +11,7 @@ import { PrimaryButton } from "../../components/button";
 export const SignUp = () => {
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
+    id: 1,
     username: "",
     name: "",
     email: "",
@@ -54,6 +55,13 @@ export const SignUp = () => {
           break;
         }
       }
+
+      const updatedFormData = {
+        ...formData,
+        id: users.length + 1
+      };
+
+      users.push(updatedFormData)
     } else {
       users = [formData];
     }
@@ -62,7 +70,7 @@ export const SignUp = () => {
 
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedUser", JSON.stringify(formData));
-    setLogged(true)
+    setLogged(true);
     navigate("/home");
   };
 

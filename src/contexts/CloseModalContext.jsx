@@ -3,7 +3,7 @@ import { useContext, createContext, useState } from "react";
 const CloseModalContext = createContext();
 
 export const CloseModalProvider = ({children}) => {
-    const [closeModal, setCloseModal] = useState(true);
+    const [closeModal, setCloseModal] = useState(false);
 
     return (
         <CloseModalContext.Provider value={{ closeModal, setCloseModal }}>

@@ -6,6 +6,7 @@ import { SignUp } from "../pages/SignUp";
 import { Home } from "../pages/Home";
 import { Profile } from "../pages/Profile";
 import { Teste } from "../pages/Teste";
+import { Search } from "../pages/Search";
 
 const publicRouters = createBrowserRouter([
   {
@@ -36,8 +37,8 @@ const privateRouters = createBrowserRouter([
     element: <Teste />
   },
   {
-    path: "/search/:query",
-    element: <Home/>  
+    path: "/search",
+    element: <Search/>  
   },
   {
     path: "*",
