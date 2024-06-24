@@ -28,4 +28,5 @@ export const FormBody = styled.div`
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
+    gap: 10px;
 `

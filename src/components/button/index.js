@@ -9,7 +9,8 @@ export const PrimaryButton = styled.button`
     border: none;
     border-radius: 0.5rem;
 
-    background-color: #4BC1D2;
+    /* background-color: #4BC1D2; */
+    background-color: ${props => props.$color || '#4BC1D2'};
     padding: 1rem;
 
     font-size: ${props => props.$size}rem;
@@ -19,7 +20,8 @@ export const PrimaryButton = styled.button`
 
     &:hover {
         cursor: pointer;
-        background-color: #3CAAB3;
+        /* background-color: #3CAAB3; */
+        background-color: ${props => props.$hover || '#3CAAB3'};
     }
 
     svg {
